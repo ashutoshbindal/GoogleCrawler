@@ -5,9 +5,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,11 +21,18 @@ public class GoogleSearchJava {
     public static void main(String[] args) throws IOException {
 
         //text file for output
-        String FILENAME = "filename.txt";
+        String FILENAME = "crawler.txt";
+        String file_name = "triples.txt";
+
         BufferedWriter bw = null;
         FileWriter fw = null;
         fw = new FileWriter(FILENAME);
         bw = new BufferedWriter(fw);
+
+        BufferedWriter bw1 = null;
+        FileWriter fw1 = null;
+        fw1 = new FileWriter(file_name);
+        bw1 = new BufferedWriter(fw1);
 
         //Taking search term input from console
         Scanner scanner = new Scanner(System.in);
@@ -83,7 +88,7 @@ public class GoogleSearchJava {
 
             for(String span_data_temp : span_data_1) {
 
-                System.out.println("Span::" + span_data_temp);
+                //System.out.println("Span::" + span_data_temp);
 
                 int flag = 0;
 
@@ -93,11 +98,11 @@ public class GoogleSearchJava {
                     para_text = para_text.replaceAll("\\[(.*?)\\]", "");
 
 
-                    if(i==1 && flag==0)
+                    /*if(i==1 && flag==0)
                     {
                         System.out.println(para_text);
                         flag = 1;
-                    }
+                    }*/
                     //System.out.println(para_text);
                     if ((para_text.replaceAll("[^a-zA-Z0-9.]" , "" )).contains(span_data_temp.replaceAll("[^a-zA-Z0-9.]" , "" ))) {
                         List<String> lines = Arrays.asList(para_text.split("\\."));
@@ -109,7 +114,7 @@ public class GoogleSearchJava {
 
 
                             for (String lines_itr : lines) {
-                                System.out.println("Done:: " + lines_itr);
+                                //System.out.println("Done:: " + lines_itr);
                                 bw.write(lines_itr);
                                 bw.write("\n");
                             }
@@ -139,6 +144,46 @@ public class GoogleSearchJava {
 
         }
 
+        //entity extraction
+
+        String command = "java -Xmx512m -jar ollie-app-latest.jar crawler.txt";
+
+        try
+        {
+            Process proc = Runtime.getRuntime().exec(command);
+
+
+            // Read the output
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+
+            String line = "";
+
+            while((line = reader.readLine()) != null) {
+
+                bw1.write(line);
+                bw1.write("\n");
+                //System.out.print(line + "\n");
+            }
+
+            proc.waitFor();
+
+        }
+        catch(Exception e){}
+
+        try {
+
+            if (bw1 != null)
+                bw1.close();
+
+            if (fw1 != null)
+                fw1.close();
+
+        } catch (IOException ex) {
+
+            ex.printStackTrace();
+
+        }
     }
 
 }
