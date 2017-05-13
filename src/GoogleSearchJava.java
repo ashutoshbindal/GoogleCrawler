@@ -23,6 +23,8 @@ public class GoogleSearchJava {
         //text file for output
         String FILENAME = "crawler.txt";
         String file_name = "triples.txt";
+        String file_url = "urls.txt";
+        String file_para = "para.txt";
 
         BufferedWriter bw = null;
         FileWriter fw = null;
@@ -34,6 +36,16 @@ public class GoogleSearchJava {
         fw1 = new FileWriter(file_name);
         bw1 = new BufferedWriter(fw1);
 
+        BufferedWriter bw2 = null;
+        FileWriter fw2 = null;
+        fw2 = new FileWriter(file_url);
+        bw2 = new BufferedWriter(fw2);
+
+        BufferedWriter bw3 = null;
+        FileWriter fw3 = null;
+        fw3 = new FileWriter(file_para);
+        bw3 = new BufferedWriter(fw3);
+
         //Taking search term input from console
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the search term.");
@@ -43,9 +55,13 @@ public class GoogleSearchJava {
         scanner.close();
 
 
-        String searchURL = GOOGLE_SEARCH_URL + "?q="+searchTerm+"&num="+num;
+        String searchURL = GOOGLE_SEARCH_URL + "?q="+searchTerm+" -site:wordpress.com"+"&num="+num;
         //without proper User-Agent, we will get 403 error
+
         Document doc = Jsoup.connect(searchURL).userAgent("Mozilla/5.0").get();
+
+
+        //Document doc0 = Jsoup.connect("https://wordpress.com/read/blogs/110825788/posts/1601").userAgent("Mozilla/5.0").get();
 
         //below will print HTML data, save it to a file and open in browser to compare
         //System.out.println(doc.html());
@@ -57,7 +73,9 @@ public class GoogleSearchJava {
 
         for (Element result : results) {
             String linkHref = result.attr("href");
+            System.out.println(linkHref);
             String linkText = result.text();
+
             link_data.add(linkHref.substring(7, linkHref.indexOf("&")));
             System.out.println("Text::" + linkText + ", URL::" + linkHref.substring(7, linkHref.indexOf("&")));
 
@@ -72,62 +90,76 @@ public class GoogleSearchJava {
 
         for(int i=0; i<link_data.size();i++)
         {
-            System.out.println(i);
-            //filter span data
-            String span_temp = span_data.get(i);
-            List<String> span_data_1 = Arrays.asList(span_temp.split("\\.\\.\\."));
-
-            /*for(String span_print : span_data_1)
+            if(span_data.get(i)!=null)
             {
-                System.out.println(span_print);
-            }*/
+                System.out.println(i);
+                //filter span data
+                String span_temp = span_data.get(i);
+                List<String> span_data_1 = Arrays.asList(span_temp.split("\\.\\.\\."));
 
-            //search
-            Document doc_1 = Jsoup.connect(link_data.get(i)).userAgent("Mozilla/5.0").get();
-            Elements para = doc_1.select("p");
+                /*for(String span_print : span_data_1)
+                {
+                    System.out.println(span_print);
+                }*/
 
-            for(String span_data_temp : span_data_1) {
+                //search
+                Document doc_1 = Jsoup.connect(link_data.get(i)).userAgent("Mozilla/5.0").get();
+                Elements para = doc_1.select("p");
 
-                //System.out.println("Span::" + span_data_temp);
+                for(String span_data_temp : span_data_1) {
 
-                int flag = 0;
+                    //System.out.println("Span::" + span_data_temp);
 
-                for (Element para_temp : para) {
+                    int flag = 0;
 
-                    String para_text = para_temp.text();
-                    para_text = para_text.replaceAll("\\[(.*?)\\]", "");
+                    for (Element para_temp : para) {
 
-
-                    /*if(i==1 && flag==0)
-                    {
-                        System.out.println(para_text);
-                        flag = 1;
-                    }*/
-                    //System.out.println(para_text);
-                    if ((para_text.replaceAll("[^a-zA-Z0-9.]" , "" )).contains(span_data_temp.replaceAll("[^a-zA-Z0-9.]" , "" ))) {
-                        List<String> lines = Arrays.asList(para_text.split("\\."));
+                        String para_text = para_temp.text();
+                        para_text = para_text.replaceAll("\\[(.*?)\\]", "");
 
 
-                        try {
+                        /*if(i==1 && flag==0)
+                        {
+                            System.out.println(para_text);
+                            flag = 1;
+                        }*/
+                        //System.out.println(para_text);
+                        if ((para_text.replaceAll("[^a-zA-Z0-9.]" , "" )).contains(span_data_temp.replaceAll("[^a-zA-Z0-9.]" , "" ))) {
+                            List<String> lines = Arrays.asList(para_text.split("\\."));
 
-                            //String content = "This is the content to write into file\n";
+
+                            try {
+
+                                //String content = "This is the content to write into file\n";
 
 
-                            for (String lines_itr : lines) {
-                                //System.out.println("Done:: " + lines_itr);
-                                bw.write(lines_itr);
-                                bw.write("\n");
+                                for (String lines_itr : lines) {
+                                    //System.out.println("Done:: " + lines_itr);
+                                    bw.write(lines_itr);
+                                    bw.write("\n");
+                                    bw2.write(link_data.get(i));
+                                    bw2.write("\n");
+                                    bw3.write(para_text);
+                                    bw3.write("\n");
+                                }
+                                System.out.println("Done Writing");
+
+                            } catch (IOException e) {
+
+                                e.printStackTrace();
+
                             }
-                            System.out.println("Done Writing");
-
-                        } catch (IOException e) {
-
-                            e.printStackTrace();
 
                         }
-
                     }
                 }
+            }
+            else
+            {
+                bw.write("\n");
+                bw2.write(link_data.get(i));
+                bw2.write("\n");
+                bw3.write("\n");
             }
         }
         try {
@@ -137,6 +169,18 @@ public class GoogleSearchJava {
 
             if (fw != null)
                 fw.close();
+
+            if (bw2 != null)
+                bw2.close();
+
+            if (fw2 != null)
+                fw2.close();
+
+            if (bw3 != null)
+                bw3.close();
+
+            if (fw3 != null)
+                fw3.close();
 
         } catch (IOException ex) {
 
