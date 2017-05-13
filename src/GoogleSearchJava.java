@@ -99,7 +99,7 @@ public class GoogleSearchJava {
                         flag = 1;
                     }
                     //System.out.println(para_text);
-                    if (para_text.contains(span_data_temp)) {
+                    if ((para_text.replaceAll("[^a-zA-Z0-9.]" , "" )).contains(span_data_temp.replaceAll("[^a-zA-Z0-9.]" , "" ))) {
                         List<String> lines = Arrays.asList(para_text.split("\\."));
 
 
