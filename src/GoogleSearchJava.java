@@ -1,16 +1,16 @@
 //package com.journaldev.jsoup;
 
-import java.io.IOException;
-import java.util.Scanner;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class GoogleSearchJava {
 
-    public String[]
+
     public static final String GOOGLE_SEARCH_URL = "https://www.google.com/search";
     public static void main(String[] args) throws IOException {
         //Taking search term input from console
@@ -37,6 +37,13 @@ public class GoogleSearchJava {
             String linkHref = result.attr("href");
             String linkText = result.text();
             System.out.println("Text::" + linkText + ", URL::" + linkHref.substring(6, linkHref.indexOf("&")));
+
+
+            Document doc1 = Jsoup.connect(linkHref.substring(7, linkHref.indexOf("&"))).userAgent("Mozilla/5.0").get();
+            Elements results_temp = doc1.select("title");
+            for(Element results_temp1 : results_temp) {
+                System.out.println( "Found:: " + results_temp1.text());
+            }
         }
 
         for (Element result_1: results_1) {
