@@ -24,7 +24,7 @@ public class parsePOS {
         int url_num = 1;
         try {
 
-            fr = new FileReader("triples_post");
+            fr = new FileReader("triples_POS.txt");
             br = new BufferedReader(fr);
 
             String sCurrentLine;

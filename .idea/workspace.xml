@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49ecb681-b9b8-4a70-8782-6d4c551c1c25" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parseOllie.java" afterPath="$PROJECT_DIR$/src/parseOllie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv_triples_ollie.csv" afterPath="$PROJECT_DIR$/csv_triples_ollie.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawler.txt" afterPath="$PROJECT_DIR$/crawler.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/para.txt" afterPath="$PROJECT_DIR$/para.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/parsePOS.java" afterPath="$PROJECT_DIR$/src/parsePOS.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/triples_ollie.txt" afterPath="$PROJECT_DIR$/triples_ollie.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/urls.txt" afterPath="$PROJECT_DIR$/urls.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,12 +26,27 @@
       <file leaf-file-name="GoogleSearchJava.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GoogleSearchJava.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="199" column="62" lean-forward="true" selection-start-line="199" selection-start-column="62" selection-end-line="199" selection-end-column="62" />
+            <state relative-caret-position="495">
+              <caret line="224" column="26" lean-forward="true" selection-start-line="224" selection-start-column="26" selection-end-line="224" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#409#417#0" expanded="true" />
                 <element signature="e#482#490#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parsePOS.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parsePOS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#547#555#0" expanded="true" />
+                <element signature="e#640#648#0" expanded="true" />
+                <element signature="e#948#956#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parseOllie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parseOllie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parseOllie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -57,16 +76,6 @@
       </file>
       <file leaf-file-name="csv_triples_ollie.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/csv_triples_ollie.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="csv_entity_POS.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/csv_entity_POS.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -141,8 +150,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/GoogleSearchJava.java" />
-        <option value="$PROJECT_DIR$/src/parsePOS.java" />
         <option value="$PROJECT_DIR$/src/parseOllie.java" />
+        <option value="$PROJECT_DIR$/src/parsePOS.java" />
       </list>
     </option>
   </component>
@@ -589,6 +598,13 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -747,11 +763,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494755613360</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="some minor changes in Ollie Parser again">
+      <created>1494758449144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1494758449144</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21197000" />
+    <option name="totallyTimeSpent" value="21873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -775,7 +798,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5317829" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5317829" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7116279" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -863,7 +886,8 @@
     <MESSAGE value="tweaking - wordpress dismissal" />
     <MESSAGE value="triples for ollie and posT made. Also parser for Ollie made." />
     <MESSAGE value="some minor changes in Ollie Parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="some minor changes in Ollie Parser" />
+    <MESSAGE value="some minor changes in Ollie Parser again" />
+    <option name="LAST_COMMIT_MESSAGE" value="some minor changes in Ollie Parser again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1309,19 +1333,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GoogleSearchJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="199" column="62" lean-forward="true" selection-start-line="199" selection-start-column="62" selection-end-line="199" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#409#417#0" expanded="true" />
-            <element signature="e#482#490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/triples_ollie.txt">
+    <entry file="file://$PROJECT_DIR$/csv_entity_POS.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1329,14 +1341,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parsePOS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/csv_entity_POS.csv">
+    <entry file="file://$PROJECT_DIR$/triples_ollie.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1358,6 +1363,31 @@
           <caret line="38" column="89" lean-forward="false" selection-start-line="38" selection-start-column="89" selection-end-line="38" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GoogleSearchJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="224" column="26" lean-forward="true" selection-start-line="224" selection-start-column="26" selection-end-line="224" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#409#417#0" expanded="true" />
+            <element signature="e#482#490#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parsePOS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#547#555#0" expanded="true" />
+            <element signature="e#640#648#0" expanded="true" />
+            <element signature="e#948#956#0" expanded="true" />
           </folding>
         </state>
       </provider>

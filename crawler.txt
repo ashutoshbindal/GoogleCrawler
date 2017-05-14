@@ -1,23 +1,158 @@
-Frank Zappa Meets the Mothers of Prevention is a 1985 album by Frank Zappa.
- The album was originally released in two slightly different versions in the US and Europe.
-Frank Vincent Zappa (December 21, 1940 – December 4, 1993) was an American musician and filmmaker whose work was characterized by nonconformity, free-form improvisation, sound experiments, musical virtuosity, and satire of American culture.
- In a career spanning more than 30 years, Zappa composed rock, pop, jazz, jazz fusion, orchestral and musique concrète works, and produced almost all of the 60-plus albums that he released with his band the Mothers of Invention and as a solo artist.
- Zappa also directed feature-length films and music videos, and designed album covers.
- He is considered one of the most innovative and stylistically diverse rock musicians of his generation.
-Nasal imagery and references appear in his music and lyrics, as well as in the collage album covers created by his long-time collaborator Cal Schenkel.
- Zappa believed his childhood diseases might have been due to exposure to mustard gas, released by the nearby chemical warfare facility.
- His health worsened when he lived in Baltimore.
- In 1952, his family relocated for reasons of health.
- They next moved to Monterey, California, where his father taught metallurgy at the Naval Postgraduate School.
- They soon moved to Claremont, California, then to El Cajon, before finally settling in San Diego.
-By 1956, the Zappa family had moved to Lancaster, a small aerospace and farming town in the Antelope Valley of the Mojave Desert close to Edwards Air Force Base; he would later refer to Lancaster in the 1973 track "Village of the Sun".
- Zappa's mother encouraged him in his musical interests.
- Although she disliked Varèse's music, she was indulgent enough to give her son a long distance call to the composer as a 15th birthday present.
- Unfortunately, Varèse was in Europe at the time, so Zappa spoke to the composer's wife and she suggested he call back later.
- In a letter Varèse thanked him for his interest, and told him about a composition he was working on called "Déserts".
- Living in the desert town of Lancaster, Zappa found this very exciting.
- Varèse invited him to visit if he ever came to New York.
- The meeting never took place (Varèse died in 1965), but Zappa framed the letter and kept it on display for the rest of his life.
-Frank Zappa was born in Baltimore, Maryland.
- His mother, Rose Marie (née Colimore), was of Italian and French ancestry; his father, Francis Vincent Zappa, was an immigrant from Partinico, Sicily with Greek and Arab ancestry.
- Frank Zappa, the eldest of four children, was raised in an Italian-American household where Italian was spoken often by his grandparents.
+.
+.
+.
+.
+MathWorks Machine Translation.
+The automated translation of this page is provided by a general purpose third party translator tool.
+MathWorks does not warrant, and disclaims all liability for, the accuracy, suitability, or fitness for purpose of the translation.
+The aim of supervised, machine learning is to build a model that makes predictions based on evidence in the presence of uncertainty.
+ As adaptive algorithms identify patterns in data, a computer "learns" from the observations.
+ When exposed to more observations, the computer improves its predictive performance.
+Specifically, a supervised learning algorithm takes a known set of input data and known responses to the data (output), and trains a model to generate reasonable predictions for the response to new data.
+.
+For example, suppose you want to predict whether someone will have a heart attack within a year.
+ You have a set of data on previous patients, including age, weight, height, blood pressure, etc.
+ You know whether the previous patients had heart attacks within a year of their measurements.
+ So, the problem is combining all the existing data into a model that can predict whether a new person will have a heart attack within a year.
+You can think of the entire set of input data as a heterogeneous matrix.
+ Rows of the matrix are called observations, examples, or instances, and each contain a set of measurements for a subject (patients in the example).
+ Columns of the matrix are called predictors, attributes, or features, and each are variables representing a measurement taken on every subject (age, weight, height, etc.
+ in the example).
+ You can think of the response data as a column vector where each row contains the output of the corresponding observation in the input data (whether the patient had a heart attack).
+ To fit or train a supervised learning model, choose an appropriate algorithm, and then pass the input and response data to it.
+Supervised learning splits into two broad categories: classification and regression.
+In classification, the goal is to assign a class (or label) from a finite set of classes to an observation.
+ That is, responses are categorical variables.
+ Applications include spam filters, advertisement recommendation systems, and image and speech recognition.
+ Predicting whether a patient will have a heart attack within a year is a classification problem, and the possible classes are true and false.
+ Classification algorithms usually apply to nominal response values.
+ However, some algorithms can accommodate ordinal classes (see fitcecoc).
+.
+In regression, the goal is to predict a continuous measurement for an observation.
+ That is, the responses variables are real numbers.
+ Applications include forecasting stock prices, energy consumption, or disease incidence.
+Statistics and Machine Learning Toolbox™ supervised learning functionalities comprise a stream-lined, object framework.
+ You can efficiently train a variety of algorithms, combine models into an ensemble, assess model performances, cross-validate, and predict responses for new data.
+While there are many Statistics and Machine Learning Toolbox algorithms for supervised learning, most use the same basic workflow for obtaining a predictor model.
+ (Detailed instruction on the steps for ensemble learning is in Framework for Ensemble Learning.
+) The steps for supervised learning are:.
+Prepare Data.
+Choose an Algorithm.
+Fit a Model.
+Choose a Validation Method.
+Examine Fit and Update Until Satisfied.
+Use Fitted Model for Predictions.
+All supervised learning methods start with an input data matrix, usually called X here.
+ Each row of X represents one observation.
+ Each column of X represents one variable, or predictor.
+ Represent missing entries with NaN values in X.
+ Statistics and Machine Learning Toolbox supervised learning algorithms can handle NaN values, either by ignoring them or by ignoring any row with a NaN value.
+You can use various data types for response data Y.
+ Each element in Y represents the response to the corresponding row of X.
+ Observations with missing Y data are ignored.
+For regression, Y must be a numeric vector with the same number of elements as the number of rows of X.
+For classification, Y can be any of these data types.
+ This table also contains the method of including missing entries.
+.
+There are tradeoffs between several characteristics of algorithms, such as:.
+Speed of training.
+Memory usage.
+Predictive accuracy on new data.
+Transparency or interpretability, meaning how easily you can understand the reasons an algorithm makes its predictions.
+Details of the algorithms appear in Characteristics of Classification Algorithms.
+ More detail about ensemble algorithms is in Choose an Applicable Ensemble Method.
+The fitting function you use depends on the algorithm you choose.
+.
+For a comparison of these algorithms, see Characteristics of Classification Algorithms.
+The three main methods to examine the accuracy of the resulting fitted model are:.
+Examine the resubstitution error.
+ For examples, see:.
+Classification Tree Resubstitution Error.
+Cross Validate a Regression Tree.
+Test Ensemble Quality.
+Example: Resubstitution Error of a Discriminant Analysis Classifier.
+Examine the cross-validation error.
+ For examples, see:.
+Cross Validate a Regression Tree.
+Test Ensemble Quality.
+Classification with Many Categorical Levels.
+Cross Validating a Discriminant Analysis Classifier.
+Examine the out-of-bag error for bagged decision trees.
+ For examples, see:.
+Test Ensemble Quality.
+Regression of Insurance Risk Rating for Car Imports Using TreeBagger.
+Classifying Radar Returns for Ionosphere Data Using TreeBagger.
+After validating the model, you might want to change it for better accuracy, better speed, or to use less memory.
+Change fitting parameters to try to get a more accurate model.
+ For examples, see:.
+Tune RobustBoost.
+Train Ensemble With Unequal Classification Costs.
+Improve a Discriminant Analysis Classifier.
+Change fitting parameters to try to get a smaller model.
+ This sometimes gives a model with more accuracy.
+ For examples, see:.
+Select Appropriate Tree Depth.
+Prune a Classification Tree.
+Surrogate Splits.
+Regularize a Regression Ensemble.
+Regression of Insurance Risk Rating for Car Imports Using TreeBagger.
+Classifying Radar Returns for Ionosphere Data Using TreeBagger.
+Try a different algorithm.
+ For applicable choices, see:.
+Characteristics of Classification Algorithms.
+Choose an Applicable Ensemble Method.
+When satisfied with a model of some types, you can trim it using the appropriate compact function (compact for classification trees, compact for regression trees, compact for discriminant analysis, compact for naive Bayes, compact for SVM, compact for ECOC models, compact for classification ensembles, and compact for regression ensembles).
+ compact removes training data and other properties not required for prediction, e.
+g.
+, pruning information for decision trees, from the model to reduce memory consumption.
+ Because kNN classification models require all of the training data to predict labels, you cannot reduce the size of a ClassificationKNN model.
+To predict classification or regression response for most fitted models, use the predict method:.
+obj is the fitted model or fitted compact model.
+Xnew is the new input data.
+Ypredicted is the predicted response, either classification or regression.
+This table shows typical characteristics of the various supervised learning algorithms.
+ The characteristics in any particular case can vary from the listed ones.
+ Use the table as a guide for your initial choice of algorithms.
+ Decide on the tradeoff you want in speed, memory usage, flexibility, and interpretability.
+Tip:   Try a decision tree or discriminant first, because these classifiers are fast and easy to interpret.
+ If the models are not accurate enough predicting the response, try other classifiers with higher flexibility.
+To control flexibility, see the details for each classifier type.
+ To avoid overfitting, look for a model of lower flexibility that provides sufficient accuracy.
+.
+The results in this table are based on an analysis of many data sets.
+ The data sets in the study have up to 7000 observations, 80 predictors, and 50 classes.
+ This list defines the terms in the table.
+Speed:.
+Fast — 0.
+01 second.
+Medium — 1 second.
+Slow — 100 seconds.
+.
+Memory.
+Small — 1MB.
+Medium — 4MB.
+Large — 100MB.
+Note:   The table provides a general guide.
+ Your results depend on your data and the speed of your machine.
+This table describes the data-type support of predictors for each classifier.
+.
+Choose your country to get translated content where available and see local events and offers.
+ Based on your location, we recommend that you select: .
+You can also select a location from the following list:.
+See all countries.
+Accelerating the pace of engineering and science.
+MathWorks is the leading developer of mathematical computing software for engineers and scientists.
+Discover.
+© 1994-2017 The MathWorks, Inc.
+Join the conversation.
+The most widely used learning algorithms are Support Vector Machines, linear regression, logistic regression, naive Bayes, linear discriminant analysis, decision trees, k-nearest neighbor algorithm, and Neural Networks (Multilayer perceptron).
+Specifically, a supervised learning algorithm takes a known set of input data and known responses to the data (output), and trains a model to generate reasonable predictions for the response to new data.
+Supervised learning is a type of machine learning algorithm that uses a known dataset (called the training dataset) to make predictions.
+ The training dataset includes input data and response values.
+ From it, the supervised learning algorithm seeks to build a model that can make predictions of the response values for a new dataset.
+ A test dataset is often used to validate the model.
+ Using larger training datasets often yield models with higher predictive power that can generalize well for new datasets.
+In the data science course that I instruct, we cover most of the data science pipeline but focus especially on machine learning.
+ Besides teaching model evaluation procedures and metrics, we obviously teach the algorithms themselves, primarily for supervised learning.
+Now your supervised learning algorithm will try to learn the probability of Y for a particular X.
+ In probability notation it is called posteriorly probability or Probability(Y/X).
