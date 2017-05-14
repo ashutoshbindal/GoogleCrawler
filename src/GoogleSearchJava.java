@@ -218,7 +218,7 @@ public class GoogleSearchJava {
         }
         catch(Exception e){}
 
-        //entity extraction from Ollie
+        //entity extraction from posTagger
 
         // run the following command
         /*
