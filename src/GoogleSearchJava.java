@@ -22,7 +22,7 @@ public class GoogleSearchJava {
 
         //text file for output
         String FILENAME = "crawler.txt";
-        String file_name = "triples.txt";
+        String file_name = "triples_ollie.txt";
         String file_url = "urls.txt";
         String file_para = "para.txt";
 
@@ -64,7 +64,7 @@ public class GoogleSearchJava {
         //Document doc0 = Jsoup.connect("https://wordpress.com/read/blogs/110825788/posts/1601").userAgent("Mozilla/5.0").get();
 
         //below will print HTML data, save it to a file and open in browser to compare
-        //System.out.println(doc.html());
+        System.out.println(doc.html());
 
         //If google search results HTML change the <h3 class="r" to <h3 class="r1"
         //we need to change below accordingly
@@ -90,9 +90,11 @@ public class GoogleSearchJava {
 
         for(int i=0; i<link_data.size();i++)
         {
-            if(span_data.get(i)!=null)
+            System.out.println(i);
+            System.out.println("size::" + span_data.size());
+            //if(span_data.get(i).length()>=1)
             {
-                System.out.println(i);
+
                 //filter span data
                 String span_temp = span_data.get(i);
                 List<String> span_data_1 = Arrays.asList(span_temp.split("\\.\\.\\."));
@@ -136,6 +138,7 @@ public class GoogleSearchJava {
                                 for (String lines_itr : lines) {
                                     //System.out.println("Done:: " + lines_itr);
                                     bw.write(lines_itr);
+                                    bw.write(".");
                                     bw.write("\n");
                                     bw2.write(link_data.get(i));
                                     bw2.write("\n");
@@ -154,13 +157,13 @@ public class GoogleSearchJava {
                     }
                 }
             }
-            else
+            /*else
             {
                 bw.write("\n");
                 bw2.write(link_data.get(i));
                 bw2.write("\n");
                 bw3.write("\n");
-            }
+            }*/
         }
         try {
 
@@ -188,7 +191,7 @@ public class GoogleSearchJava {
 
         }
 
-        //entity extraction
+        //entity extraction from Ollie
 
         String command = "java -Xmx512m -jar ollie-app-latest.jar crawler.txt";
 
@@ -215,6 +218,35 @@ public class GoogleSearchJava {
         }
         catch(Exception e){}
 
+        //entity extraction from Ollie
+
+        // run the following command
+        /*
+        String command = "java -cp \"*\" edu.stanford.nlp.tagger.maxent.MaxentTagger -model models/english-left3words-distsim.tagger -textFile crawler.txt -outputFormat tsv -outputFile triples_post.tag\n";
+
+        try
+        {
+            Process proc = Runtime.getRuntime().exec(command);
+
+
+            // Read the output
+
+            BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));
+
+            String line = "";
+
+            while((line = reader.readLine()) != null) {
+
+                bw1.write(line);
+                bw1.write("\n");
+                //System.out.print(line + "\n");
+            }
+
+            proc.waitFor();
+
+        }
+        catch(Exception e){}
+    */
         try {
 
             if (bw1 != null)
