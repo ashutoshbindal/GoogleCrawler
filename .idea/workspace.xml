@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49ecb681-b9b8-4a70-8782-6d4c551c1c25" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GoogleSearchJava.java" afterPath="$PROJECT_DIR$/src/GoogleSearchJava.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +45,8 @@
       <file leaf-file-name="parseOllie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parseOllie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            <state relative-caret-position="280">
+              <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,7 +248,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GoogleSearchJava">
+  <component name="RunManager" selected="Application.parseOllie">
     <configuration default="false" name="GoogleSearchJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="GoogleSearchJava" />
@@ -673,8 +672,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.GoogleSearchJava" />
-        <item index="1" class="java.lang.String" itemvalue="Application.parseOllie" />
+        <item index="0" class="java.lang.String" itemvalue="Application.parseOllie" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GoogleSearchJava" />
       </list>
     </recent_temporary>
   </component>
@@ -694,7 +693,7 @@
       <workItem from="1494685252227" duration="308000" />
       <workItem from="1494690609216" duration="665000" />
       <workItem from="1494704683181" duration="682000" />
-      <workItem from="1494737336757" duration="2205000" />
+      <workItem from="1494737336757" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="entity extraction complete">
       <created>1494696177822</created>
@@ -710,11 +709,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494708660954</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="triples for ollie and posT made. Also parser for Ollie made.">
+      <created>1494755358410</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1494755358410</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19443000" />
+    <option name="totallyTimeSpent" value="19722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -800,7 +806,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="entity extraction complete" />
     <MESSAGE value="tweaking - wordpress dismissal" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaking - wordpress dismissal" />
+    <MESSAGE value="triples for ollie and posT made. Also parser for Ollie made." />
+    <option name="LAST_COMMIT_MESSAGE" value="triples for ollie and posT made. Also parser for Ollie made." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1012,16 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parseOllie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawler.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1047,6 +1044,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parseOllie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="35" column="32" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
