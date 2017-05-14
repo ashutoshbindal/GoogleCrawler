@@ -29,7 +29,7 @@ public class parsePOS {
 
             String sCurrentLine;
 
-            br = new BufferedReader(new FileReader("triples_post"));
+            br = new BufferedReader(fr);
 
             ArrayList<String> ent_tag_list = new ArrayList<String>();
 
