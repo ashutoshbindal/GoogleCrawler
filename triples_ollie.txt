@@ -1,0 +1,412 @@
+.
+No extractions found.
+
+.
+No extractions found.
+
+.
+No extractions found.
+
+.
+No extractions found.
+
+MathWorks Machine Translation.
+No extractions found.
+
+The automated translation of this page is provided by a general purpose third party translator tool.
+0.919: (The automated translation of this page; is provided by; a general purpose third party translator tool)
+
+MathWorks does not warrant, and disclaims all liability for, the accuracy, suitability, or fitness for purpose of the translation.
+No extractions found.
+
+The aim of supervised, machine learning is to build a model that makes predictions based on evidence in the presence of uncertainty.
+0.817: (predictions; be based on; evidence)
+0.767: (The aim of supervised; is to build; a model that makes predictions)
+0.756: (machine learning; is to build; a model that makes predictions)
+0.564: (predictions based on evidence in the presence of uncertainty; be makes by; a model)
+
+ As adaptive algorithms identify patterns in data, a computer "learns" from the observations.
+0.811: (a computer; "learns from; the observations)[enabler=As adaptive algorithms identify patterns in data]
+0.694: (adaptive algorithms; identify patterns in; data)
+0.693: (adaptive algorithms; identify; patterns)
+
+ When exposed to more observations, the computer improves its predictive performance.
+0.709: (the computer; improves; its predictive performance)
+
+Specifically, a supervised learning algorithm takes a known set of input data and known responses to the data (output), and trains a model to generate reasonable predictions for the response to new data.
+0.854: (a model; to generate reasonable predictions for; the response)
+0.798: (a model; to generate; reasonable predictions)
+0.745: (a supervised learning algorithm; Specifically takes; a known set of input data)
+0.739: (reasonable predictions; to be generate for; the response)
+0.628: (a supervised learning algorithm; Specifically takes a known set of input data and known responses to; the data (output)
+
+.
+No extractions found.
+
+For example, suppose you want to predict whether someone will have a heart attack within a year.
+0.799: (someone; will have a heart attack within; a year)
+0.758: (someone; will have; a heart attack)
+0.754: (a heart attack; will be have within; a year)
+
+ You have a set of data on previous patients, including age, weight, height, blood pressure, etc.
+0.904: (You; have; a set of data)
+0.398: (blood pressure; be data including; age)
+0.398: (height; be data including; age)
+0.398: (weight; be data including; age)
+
+ You know whether the previous patients had heart attacks within a year of their measurements.
+0.849: (the previous patients; had heart attacks within; a year of their measurements)[attrib=You know]
+0.79: (heart attacks; be had within; a year of their measurements)[attrib=You know]
+0.705: (the previous patients; had; heart attacks)[attrib=You know]
+
+ So, the problem is combining all the existing data into a model that can predict whether a new person will have a heart attack within a year.
+0.721: (the problem; So is combining all the existing data into; a model that can predict whether a new person will have a heart attack within a year)
+0.715: (the existing data; So is combining into; a model that can predict whether a new person will have a heart attack within a year)
+0.701: (a new person; will have a heart attack within; a year)
+0.649: (a new person; will have; a heart attack)
+0.645: (a heart attack; will be have within; a year)
+0.553: (the problem; So is combining; the existing data)
+
+You can think of the entire set of input data as a heterogeneous matrix.
+0.936: (You; can think of; the entire set of input data)
+0.852: (You; can think as; a heterogeneous matrix)
+0.438: (entire; set of; input data)
+
+ Rows of the matrix are called observations, examples, or instances, and each contain a set of measurements for a subject (patients in the example).
+No extractions found.
+
+ Columns of the matrix are called predictors, attributes, or features, and each are variables representing a measurement taken on every subject (age, weight, height, etc.
+0.752: (a measurement; be taken on; every subject)
+
+ in the example).
+No extractions found.
+
+ You can think of the response data as a column vector where each row contains the output of the corresponding observation in the input data (whether the patient had a heart attack).
+0.914: (You; can think of; the response data)
+0.804: (each row; contains; the output of the corresponding observation)
+0.549: (the patient; had; a heart attack)
+0.491: (the output of the corresponding observation; be contains by; a column vector)
+
+ To fit or train a supervised learning model, choose an appropriate algorithm, and then pass the input and response data to it.
+0.614: (the input and response data; To be pass to; it)
+
+Supervised learning splits into two broad categories: classification and regression.
+No extractions found.
+
+In classification, the goal is to assign a class (or label) from a finite set of classes to an observation.
+0.729: (the goal; is to assign; a class)
+0.613: (the goal; is in; classification)
+0.51: (finite; set of; classes)
+0.422: (finite; set of classes to; an observation)
+
+ That is, responses are categorical variables.
+No extractions found.
+
+ Applications include spam filters, advertisement recommendation systems, and image and speech recognition.
+0.767: (Applications; include; spam filters , advertisement recommendation systems , and image and speech recognition)
+
+ Predicting whether a patient will have a heart attack within a year is a classification problem, and the possible classes are true and false.
+0.759: (a patient; will have a heart attack within; a year)
+0.758: (a patient; will have; a heart attack)
+0.709: (a heart attack; will be have within; a year)
+
+ Classification algorithms usually apply to nominal response values.
+0.83: (Classification algorithms; usually apply to; nominal response values)
+
+ However, some algorithms can accommodate ordinal classes (see fitcecoc).
+No extractions found.
+
+.
+No extractions found.
+
+In regression, the goal is to predict a continuous measurement for an observation.
+0.798: (the goal; is to predict; a continuous measurement)
+0.613: (the goal; is in; regression)
+
+ That is, the responses variables are real numbers.
+No extractions found.
+
+ Applications include forecasting stock prices, energy consumption, or disease incidence.
+0.607: (Applications; include forecasting; stock prices)
+
+Statistics and Machine Learning Toolbox™ supervised learning functionalities comprise a stream-lined, object framework.
+0.773: (functionalities; comprise; a stream-lined , object framework)
+
+ You can efficiently train a variety of algorithms, combine models into an ensemble, assess model performances, cross-validate, and predict responses for new data.
+0.875: (You; can efficiently train; a variety of algorithms)
+0.725: (models; be combine into; an ensemble)
+
+While there are many Statistics and Machine Learning Toolbox algorithms for supervised learning, most use the same basic workflow for obtaining a predictor model.
+0.617: (most; use; the same basic workflow)[enabler=While there are many Statistics and Machine Learning Toolbox algorithms for supervised learning]
+
+ (Detailed instruction on the steps for ensemble learning is in Framework for Ensemble Learning.
+0.847: (Detailed instruction; is in; Framework)
+
+) The steps for supervised learning are:.
+No extractions found.
+
+Prepare Data.
+No extractions found.
+
+Choose an Algorithm.
+No extractions found.
+
+Fit a Model.
+No extractions found.
+
+Choose a Validation Method.
+No extractions found.
+
+Examine Fit and Update Until Satisfied.
+No extractions found.
+
+Use Fitted Model for Predictions.
+No extractions found.
+
+All supervised learning methods start with an input data matrix, usually called X here.
+0.841: (All supervised learning methods; start with; an input data matrix usually called X here)
+
+ Each row of X represents one observation.
+0.772: (Each row of X; represents; one observation)
+
+ Each column of X represents one variable, or predictor.
+0.772: (Each column of X; represents; one variable , or predictor)
+
+ Represent missing entries with NaN values in X.
+No extractions found.
+
+ Statistics and Machine Learning Toolbox supervised learning algorithms can handle NaN values, either by ignoring them or by ignoring any row with a NaN value.
+0.638: (Statistics and Machine Learning Toolbox; supervised can handle; NaN values)
+
+You can use various data types for response data Y.
+0.881: (You; can use various data types for; response data Y)
+0.854: (You; can use; various data types)
+0.695: (various data types; can be use for; response data Y)
+
+ Each element in Y represents the response to the corresponding row of X.
+0.807: (Each element; represents; the response)
+
+ Observations with missing Y data are ignored.
+No extractions found.
+
+For regression, Y must be a numeric vector with the same number of elements as the number of rows of X.
+0.912: (Y; must be a numeric vector with; the same number of elements)
+0.873: (Y; must be a numeric vector as; the number of rows of X)
+0.685: (Y; must be; a numeric vector)
+0.646: (Y; must be a numeric vector for; regression)
+
+For classification, Y can be any of these data types.
+No extractions found.
+
+ This table also contains the method of including missing entries.
+0.806: (This table; also contains; the method including missing entries)
+
+.
+No extractions found.
+
+There are tradeoffs between several characteristics of algorithms, such as:.
+No extractions found.
+
+Speed of training.
+No extractions found.
+
+Memory usage.
+No extractions found.
+
+Predictive accuracy on new data.
+No extractions found.
+
+Transparency or interpretability, meaning how easily you can understand the reasons an algorithm makes its predictions.
+0.841: (you; can understand; the reasons an algorithm makes its predictions)
+0.698: (an algorithm; makes; its predictions)
+0.63: (its predictions; be makes by; the reasons)
+
+Details of the algorithms appear in Characteristics of Classification Algorithms.
+0.79: (the algorithms; appear in; Characteristics of Classification Algorithms)
+
+ More detail about ensemble algorithms is in Choose an Applicable Ensemble Method.
+0.846: (More detail; is in; Choose an Applicable Ensemble Method)
+
+The fitting function you use depends on the algorithm you choose.
+0.862: (The fitting function you use; depends on; the algorithm you choose)
+
+.
+No extractions found.
+
+For a comparison of these algorithms, see Characteristics of Classification Algorithms.
+No extractions found.
+
+The three main methods to examine the accuracy of the resulting fitted model are:.
+No extractions found.
+
+Examine the resubstitution error.
+No extractions found.
+
+ For examples, see:.
+No extractions found.
+
+Classification Tree Resubstitution Error.
+No extractions found.
+
+Cross Validate a Regression Tree.
+No extractions found.
+
+Test Ensemble Quality.
+No extractions found.
+
+Example: Resubstitution Error of a Discriminant Analysis Classifier.
+No extractions found.
+
+Examine the cross-validation error.
+No extractions found.
+
+ For examples, see:.
+No extractions found.
+
+Cross Validate a Regression Tree.
+No extractions found.
+
+Test Ensemble Quality.
+No extractions found.
+
+Classification with Many Categorical Levels.
+No extractions found.
+
+Cross Validating a Discriminant Analysis Classifier.
+No extractions found.
+
+Examine the out-of-bag error for bagged decision trees.
+0.621: (Examine; be the out-of-bag error for; bagged decision trees)
+
+ For examples, see:.
+No extractions found.
+
+Test Ensemble Quality.
+No extractions found.
+
+Regression of Insurance Risk Rating for Car Imports Using TreeBagger.
+No extractions found.
+
+Classifying Radar Returns for Ionosphere Data Using TreeBagger.
+0.592: (Ionosphere Data; Using; TreeBagger)
+
+After validating the model, you might want to change it for better accuracy, better speed, or to use less memory.
+0.847: (you; might want to change it for; better accuracy)
+0.805: (you; might want to change; it)
+0.732: (you; to change; it)
+0.472: (it; to be change for; better accuracy)
+
+Change fitting parameters to try to get a more accurate model.
+0.772: (Change fitting parameters; to try to get; a more accurate model)
+0.75: (Change fitting parameters; to get; a more accurate model)
+
+ For examples, see:.
+No extractions found.
+
+Tune RobustBoost.
+No extractions found.
+
+Train Ensemble With Unequal Classification Costs.
+No extractions found.
+
+Improve a Discriminant Analysis Classifier.
+No extractions found.
+
+Change fitting parameters to try to get a smaller model.
+0.772: (Change fitting parameters; to try to get; a smaller model)
+0.75: (Change fitting parameters; to get; a smaller model)
+
+ This sometimes gives a model with more accuracy.
+No extractions found.
+
+ For examples, see:.
+No extractions found.
+
+Select Appropriate Tree Depth.
+No extractions found.
+
+Prune a Classification Tree.
+No extractions found.
+
+Surrogate Splits.
+No extractions found.
+
+Regularize a Regression Ensemble.
+No extractions found.
+
+Regression of Insurance Risk Rating for Car Imports Using TreeBagger.
+No extractions found.
+
+Classifying Radar Returns for Ionosphere Data Using TreeBagger.
+0.592: (Ionosphere Data; Using; TreeBagger)
+
+Try a different algorithm.
+No extractions found.
+
+ For applicable choices, see:.
+No extractions found.
+
+Characteristics of Classification Algorithms.
+No extractions found.
+
+Choose an Applicable Ensemble Method.
+No extractions found.
+
+When satisfied with a model of some types, you can trim it using the appropriate compact function (compact for classification trees, compact for regression trees, compact for discriminant analysis, compact for naive Bayes, compact for SVM, compact for ECOC models, compact for classification ensembles, and compact for regression ensembles).
+0.738: (you; can trim; it)
+0.689: (you; can trim it using; the appropriate compact function)
+0.319: (compact; can trim; it)
+0.313: (naive Bayes; be compact for; SVM)
+0.282: (compact; can trim it using; the appropriate compact function)
+0.21: (SVM; be compact for; ECOC models)
+0.21: (SVM; be compact for; classification ensembles)
+
+ compact removes training data and other properties not required for prediction, e.
+0.852: (compact; removes; training data and other properties not required for prediction , e)
+0.751: (training data and other properties; be not required for; prediction)
+
+g.
+No extractions found.
+
+, pruning information for decision trees, from the model to reduce memory consumption.
+0.753: (information; be pruning from; the model)
+0.675: (information; be pruning for; decision trees)
+
+ Because kNN classification models require all of the training data to predict labels, you cannot reduce the size of a ClassificationKNN model.
+0.868: (you; cannot reduce; the size of a ClassificationKNN model)[enabler=Because kNN classification models require all of the training data to predict labels]
+
+To predict classification or regression response for most fitted models, use the predict method:.
+No extractions found.
+
+obj is the fitted model or fitted compact model.
+0.565: (obj; is; the fitted model or fitted compact model)
+
+Xnew is the new input data.
+0.554: (Xnew; is; the new input data)
+
+Ypredicted is the predicted response, either classification or regression.
+No extractions found.
+
+This table shows typical characteristics of the various supervised learning algorithms.
+0.798: (This table; shows; typical characteristics of the various supervised learning algorithms)
+
+ The characteristics in any particular case can vary from the listed ones.
+0.842: (The characteristics; can vary from; the listed ones)
+
+ Use the table as a guide for your initial choice of algorithms.
+0.883: (the table; be Use as; a guide)
+
+ Decide on the tradeoff you want in speed, memory usage, flexibility, and interpretability.
+0.865: (you; want in; speed)
+
+Tip:   Try a decision tree or discriminant first, because these classifiers are fast and easy to interpret.
+No extractions found.
+
+ If the models are not accurate enough predicting the response, try other classifiers with higher flexibility.
+No extractions found.
+
+To control flexibility, see the details for each classifier type.
+No extractions found.
+
+ To avoid overfitting, look for a model of lower flexibility that provides sufficient accuracy.
+0.606: (sufficient accuracy; be provides by; lower flexibil
